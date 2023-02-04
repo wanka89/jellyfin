@@ -4,14 +4,14 @@ services:
     image: lscr.io/linuxserver/jellyfin:latest
     container_name: jellyfin
     environment:
-      - PUID=1000
-      - PGID=1000
+      - PUID=1001
+      - PGID=1001
       - TZ=Europe/London
       - JELLYFIN_PublishedServerUrl=130.162.60.179 #optional
     volumes:
-      - /srv/jellyfin/library:/config
-      - /srv/jellyfin/tvseries:/data/tvshows
-      - /srv/jellyfin/movies:/data/movies
+      - /home/ubuntu/jellyfin//library:/config
+      - /home/ubuntu/jellyfin/tvseries:/data/tvshows
+      - /home/ubuntu/jellyfin/movies:/data/movies
     ports:
       - 8096:8096
       - 8920:8920 #optional
